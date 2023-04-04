@@ -1,35 +1,46 @@
  <!-- Transformar de <script> para EJS -->
-    <div class="countdown"></div>
-    <script> 
+    <div class="countdown">
+        <script> 
 
-        var Countdown = new Date('Apr 1, 2023 16:40:00').getTime();
+            var Countdown = new Date('Feb 3, 2024 18:30:00').getTime();
 
-        //atualiza a função a cada 1 segundo
-        var x = setInterval(function() {
+            //atualiza a função a cada 1 segundo
+            var x = setInterval(function() {
 
-            //pega a data atual
-            var now = new Date().getTime();
+                //pega a data atual
+                var now = new Date().getTime();
 
-            //distancia entre as datas
-            var distance = Countdown - now;
+                //distancia entre as datas
+                var distance = Countdown - now;
 
-            var days = Math.floor(distance/(1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            //pega o elemento pelo ID e altera o texto
+                //pega o valor dos dias/horas/minutos/segundos
+                var days = Math.floor(distance/(1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.querySelector('.countdown').innerHTML = `${days}d: ${hours}s: ${minutes}m: ${seconds}s. `
+                function pad(num, size){
+                    var n = num + "";
+                    while(n.length < size) n = '0'+n;
+                    return n;
+                }
 
-            //se chegamos ao dia da data
-            if(distance<0){
-                clearInterval(x);
-                let aux = document.querySelector('.countdown')
-                aux.textContent += '\n' + 'A Contagem chegou ao fim'; 
-            }
+                days = pad(days, 2)
+                hours = pad(hours, 2)
+                minutes = pad(minutes, 2)
+                seconds = pad(seconds, 2)
+                //pega o elemento pelo ID e altera o texto
+                document.querySelector('.countdown').innerHTML = `${days} : ${hours} : ${minutes} : ${seconds}`
 
-        }, 1000)
+                //se chegamos ao dia da data
+                if(distance<0){
+                    clearInterval(x);
+                    let aux = document.querySelector('.countdown')
+                    aux.textContent += '\n' + 'A Contagem chegou ao fim'; 
+                }
 
-    
-    </script>
+            }, 1000)
+
+        
+        </script>
+    </div>

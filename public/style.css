@@ -1,5 +1,5 @@
 body{
-    background-color: powderblue;
+    background-color: whitesmoke;
 }
 
 h1{
@@ -19,8 +19,19 @@ footer{
 }
 
 .countdown{
-    font-weight: 700;
+    font-family: Poppins;
+    font-weight: 300;
     font-size: 50px;
-    color:aliceblue;
+    color:black;
+    text-align: center;
+
+
+}
+
+.launch{
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 50px;
+    color: purple;
     text-align: center;
 }
