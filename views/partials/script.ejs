@@ -1,0 +1,35 @@
+ <!-- Transformar de <script> para EJS -->
+    <div class="countdown"></div>
+    <script> 
+
+        var Countdown = new Date('Apr 1, 2023 16:40:00').getTime();
+
+        //atualiza a função a cada 1 segundo
+        var x = setInterval(function() {
+
+            //pega a data atual
+            var now = new Date().getTime();
+
+            //distancia entre as datas
+            var distance = Countdown - now;
+
+            var days = Math.floor(distance/(1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            //pega o elemento pelo ID e altera o texto
+
+            document.querySelector('.countdown').innerHTML = `${days}d: ${hours}s: ${minutes}m: ${seconds}s. `
+
+            //se chegamos ao dia da data
+            if(distance<0){
+                clearInterval(x);
+                let aux = document.querySelector('.countdown')
+                aux.textContent += '\n' + 'A Contagem chegou ao fim'; 
+            }
+
+        }, 1000)
+
+    
+    </script>

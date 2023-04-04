@@ -17,3 +17,10 @@ p{
 footer{
     text-align: center;
 }
+
+.countdown{
+    font-weight: 700;
+    font-size: 50px;
+    color:aliceblue;
+    text-align: center;
+}
