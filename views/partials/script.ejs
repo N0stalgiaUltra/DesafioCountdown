@@ -1,5 +1,7 @@
  <!-- Transformar de <script> para EJS -->
     <div class="countdown">
+        <p class="countdown_subtitle">dias horas minutos segundos</p>
+        <p class="countdown_text"></p>
         <script> 
 
             var Countdown = new Date('Feb 3, 2024 18:30:00').getTime();
@@ -19,6 +21,7 @@
                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+                //conversão para os zeros
                 function pad(num, size){
                     var n = num + "";
                     while(n.length < size) n = '0'+n;
@@ -29,13 +32,14 @@
                 hours = pad(hours, 2)
                 minutes = pad(minutes, 2)
                 seconds = pad(seconds, 2)
+
                 //pega o elemento pelo ID e altera o texto
-                document.querySelector('.countdown').innerHTML = `${days} : ${hours} : ${minutes} : ${seconds}`
+                document.querySelector('.countdown_text').innerHTML = `${days} : ${hours} : ${minutes} : ${seconds}`
 
                 //se chegamos ao dia da data
                 if(distance<0){
                     clearInterval(x);
-                    let aux = document.querySelector('.countdown')
+                    let aux = document.querySelector('.countdown_text')
                     aux.textContent += '\n' + 'A Contagem chegou ao fim'; 
                 }
 

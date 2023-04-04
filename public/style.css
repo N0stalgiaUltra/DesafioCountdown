@@ -19,19 +19,52 @@ footer{
 }
 
 .countdown{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+
     font-family: Poppins;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 50px;
     color:black;
     text-align: center;
+}
+.countdown_text{
+    align-self: auto;
+    margin-top: 0px;
+}
+.countdown_subtitle{
+    
+    /*margin: 15px 0px ;*/
+    margin-bottom: 0px;
+    padding-left: 50px;    
 
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 18px;
+    word-spacing: 30px;
 
+    color: gainsboro;
 }
 
 .launch{
     font-family: Poppins;
     font-weight: 500;
     font-size: 50px;
-    color: purple;
+    color: #6C63FF;
     text-align: center;
+}
+
+.button_disc{
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 15px;
+    color: #6C63FF;
+}
+
+button{
+    /* Alinhar o botão no centro e estilizar */
+    color: #6C63FF;
 }
