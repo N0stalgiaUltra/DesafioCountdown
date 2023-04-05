@@ -4,6 +4,7 @@ const app = express();
 
 app.set('view engine', 'ejs');
 app.use('/public', express.static('public'))
+app.use('/images', express.static('images'))
 
 app.get('/', function (req, res){
     res.render('pages/index'); //mostra a pagina com o nome index

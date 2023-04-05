@@ -1,12 +1,6 @@
 body{
     background-color: whitesmoke;
 }
-
-h1{
-    font-size: 100px;
-    text-align: center;
-}
-
 p{
     font-size: 50px;
     text-align: center;
@@ -34,16 +28,32 @@ footer{
     align-self: auto;
     margin-top: 0px;
 }
+
 .countdown_subtitle{    
+    display: inline-flex;
+    width: 75%;
     margin-bottom: 0px;
-    padding-left: 75px;    
-
+    padding-left: 30%;
+    
     font-weight: 300;
-    font-size: 18px;
-    word-spacing: 30px;
-
+    font-size: 16px;
+    word-spacing: 45px;
     color: gainsboro;
 }
+/*
+.days,
+.hours,
+.minutes,
+.seconds {
+    display: inline;
+    width: 1%;
+    margin-bottom: 0px;
+
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    word-spacing: 10px;
+}*/
 
 .launch{
     font-weight: bold;
@@ -74,4 +84,9 @@ button{
 
 
 
+}
+
+
+.rocket{
+    float:right;
 }
