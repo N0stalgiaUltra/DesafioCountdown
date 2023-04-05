@@ -11,6 +11,30 @@
         <img class= "rocket" src="images/rocket.svg" alt="imagem do foguete">
 
         <%- include('../partials/script'); %> 
+
+        <div class="button">
+            <button>Inscreva-se</button>
+
+            <div class="openModal" style="display: none"> Ainda vou te estilizar, primeiro preciso que você ative e desative</div>
+            <script>
+                //pega o botão
+                const subscribe_btn = document.querySelector('button');
+                const openModal = document.querySelector('.openModal');
+
+                subscribe_btn.addEventListener('click', switchVisible);
+
+                openModal.addEventListener('keydown', function(){
+                    if(event.key == 'Escape')
+                        switchInvisible();
+                })
+                
+                function switchInvisible(){ openModal.style.display = 'none'}
+                function switchVisible(){openModal.style.display= 'block' }
+
+            </script>
+
+        </div>
+
     </main>
 
     <footer>
