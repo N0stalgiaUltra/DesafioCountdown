@@ -17,7 +17,7 @@ footer{
     justify-content: center;
     align-content: space-around;
     width: 50%;
-
+    padding-top: 50px;
     font-family: Poppins;
     font-weight: 400;
     font-size: 50px;
@@ -40,20 +40,6 @@ footer{
     word-spacing: 45px;
     color: gainsboro;
 }
-/*
-.days,
-.hours,
-.minutes,
-.seconds {
-    display: inline;
-    width: 1%;
-    margin-bottom: 0px;
-
-    text-align: center;
-    font-size: 18px;
-    font-weight: 300;
-    word-spacing: 10px;
-}*/
 
 .launch{
     font-weight: bold;
@@ -67,7 +53,7 @@ footer{
     margin: 10px 0px;
     font-weight: 300;
     font-size: 15px;
-    color: purple;
+    color: black;
 }
 
 button{
@@ -86,7 +72,10 @@ button{
 
 }
 
-
+button:active{
+    background-color: #7974c5;
+;
+}
 .rocket{
     float:right;
 }
