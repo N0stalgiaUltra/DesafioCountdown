@@ -2,6 +2,7 @@ body{
     background-color: whitesmoke;
 }
 p{
+    font-family: Poppins;
     font-size: 50px;
     text-align: center;
 }
@@ -80,15 +81,45 @@ button:active{
 
 .openModal{
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 10%;
     width: 750px;
     height: 300px;
     border-radius: 10px;
-    background-color: red;
-    color: yellow;
+    background-color: #342ea5;
+    color: white;
+}
+.openModal h3{
+    font-family: Poppins;
+    font-size: 100%;
+    text-align: center;
 }
 
+.openModal p{
+    font-size: 100%;
+    text-align: center;
+}
 
-    
+.openModal input{    
+    width: 50%;
+    height: 10%;
+    margin-left: 25%;
+    margin-top: 1%;
+    border-radius: 5px;
+    padding: 2%;
 
+    border: 2px solid #817be9;
+
+}
+
+.openModal button{
+    display: inline;
+    width: 20%;
+
+    margin-left: 40%;
+}
+
+input:focus{
+    background-color: purple;
+    color: white;
+}

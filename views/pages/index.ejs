@@ -15,24 +15,47 @@
         <div class="button">
             <button>Inscreva-se</button>
 
-            <div class="openModal" style="display: none"> Ainda vou te estilizar, primeiro preciso que você ative e desative</div>
+            <div class="openModal" style="display: none"> 
+                <div class="open_title"> <h3>Inscreva-se </h3> </div>
+                
+                <div class="open_text"> 
+                    <p>Inscreva-se para receber em primeira mão as atualizações sobre a data!!!</p> 
+                </div>
+                <div class="open_input">
+                    <input type="text" placeholder="digite seu nome">
+                    <input type="text" id="mail" placeholder="digite seu email"> 
+                </div>
+
+                <button class="mail_btn"><a href="#" id="mail_link"></a> Enviar </button>
+                <p id="warning"> Pressione ESC para fechar </p>
+            
+            </div>
             <script>
                 //pega o botão
                 const subscribe_btn = document.querySelector('button');
+                const mail_btn = document.querySelector('.mail_btn');
+                const mail_addr = document.getElementById('mail');
+                const mail_link = document.getElementById('mail_link');
                 const openModal = document.querySelector('.openModal');
 
+                mail_btn.addEventListener('click', sendEmail);
                 subscribe_btn.addEventListener('click', switchVisible);
 
-                openModal.addEventListener('keydown', function(){
+                subscribe_btn.addEventListener('keydown', function(event){
                     if(event.key == 'Escape')
                         switchInvisible();
                 })
                 
                 function switchInvisible(){ openModal.style.display = 'none'}
                 function switchVisible(){openModal.style.display= 'block' }
+                function sendEmail(){
+                    if(mail_addr.value != null || mail_addr.value.contains('@')){
+                        mail_link.href = `mailto: ${mail_addr.value}`;
+                        window.location.href = mail_link.href; 
+                    }
 
+                }
             </script>
-
         </div>
 
     </main>
